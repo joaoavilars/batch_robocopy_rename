@@ -16,3 +16,4 @@ for /f "tokens=* delims= " %%a in ("%mytime%") do set mytime=%%a
 dir %origem%\ /b > list
 robocopy %origem% %destino%\
 for /f %%f in (list) do rename %destino%\\%%f %%~nf_%mydate%#%mytime%%%~xf
+del list
